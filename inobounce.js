@@ -103,15 +103,16 @@
 	// Enable by default if the browser supports -webkit-overflow-scrolling
 	// Test this by setting the property with JavaScript on an element that exists in the DOM
 	// Then, see if the property is reflected in the computed style
-	var testDiv = document.createElement('div');
-	document.documentElement.appendChild(testDiv);
-	testDiv.style.WebkitOverflowScrolling = 'touch';
-	var scrollSupport = 'getComputedStyle' in window && window.getComputedStyle(testDiv)['-webkit-overflow-scrolling'] === 'touch';
-	document.documentElement.removeChild(testDiv);
+	// var testDiv = document.createElement('div');
+	// document.documentElement.appendChild(testDiv);
+	// testDiv.style.WebkitOverflowScrolling = 'touch';
+	// var scrollSupport = 'getComputedStyle' in window && window.getComputedStyle(testDiv)['-webkit-overflow-scrolling'] === 'touch';
+	// document.documentElement.removeChild(testDiv);
 
-	if (scrollSupport) {
-		enable();
-	}
+	// if (scrollSupport) {
+	// 	enable();
+	// }
+	// Changed to disable by default
 
 	// A module to support enabling/disabling iNoBounce
 	var iNoBounce = {
